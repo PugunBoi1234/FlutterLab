@@ -11,7 +11,11 @@ class ProfileScreen extends StatelessWidget {
     return Scaffold(
       // Top menu
       appBar: AppBar(
-        leading: Icon(Icons.arrow_back, size: 30, color: AppColors.textPrimary,),
+        leading: IconButton(onPressed: (){
+
+          Navigator.pop(context);
+          
+        }, icon : Icon(Icons.arrow_back_ios)),
         title: Text('Profile setting', style: AppTextStyles.topic),
         centerTitle: true,
       ),

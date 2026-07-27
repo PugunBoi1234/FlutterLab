@@ -1,3 +1,5 @@
+import 'package:first_app/screens/list_view_screen.dart';
+import 'package:first_app/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'screens/home_screen.dart';
@@ -7,17 +9,13 @@ void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatefulWidget {
+class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'My Flutter App',
 
       // Remove debug
       debugShowCheckedModeBanner: false,
@@ -30,19 +28,18 @@ class _MyAppState extends State<MyApp> {
 
       // Dark Theme & Light
 
-      initialRoute: '/profile',
+      initialRoute: '/listview',
 
       // Routes
       routes: {
         '/': (context) => HomeScreen(),
         '/profile': (context) => ProfileScreen(),
+        '/login': (context) => LoginScreen(),
+        '/listview': (context) => ListViewScreen(),
       },
 
       // home: HomeScreen(),
 
-      // debugShowCheckedModeBanner: false,
-      title: 'My Flutter App',
-      // home: HomeScreen(),
     ); // MaterialApp
   }
 }
